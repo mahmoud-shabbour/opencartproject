@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OpenCartSuite">
+
+    <test name="User Authentication">
+        <classes>
+            <class name="Registeration" />
+
+            <class name="LoginValidCradential"/>
+
+            <class name="Logout" />
+
+            <class name="LoginInvalidCradential"/>
+
+        </classes>
+    </test>
+    <test name="Homepage">
+        <classes>
+            <class name="Homepage"/>
+        </classes>
+    </test>
+
+</suite>
