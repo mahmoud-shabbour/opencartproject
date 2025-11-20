@@ -4,7 +4,7 @@
 
     <test name="User Authentication">
         <classes>
-            <class name="Registeration" />
+            <class name="Registration" />
 
             <class name="LoginValidCradential"/>
 
@@ -16,7 +16,12 @@
     </test>
     <test name="Homepage">
         <classes>
-            <class name="Homepage"/>
+            <class name="Home"/>
+        </classes>
+    </test>
+    <test name="Checkout">
+        <classes>
+            <class name="Checkout"></class>
         </classes>
     </test>
 
