@@ -20,14 +20,14 @@ public class HomePage extends BasePage {
 
     // Search Functionality
     By searchBox = By.name("search");
-    By searchButton = By.xpath("//button[@type='submit']"); // او //button[@class='btn btn-default btn-lg'] حسب نسخة اوبن كارت
+    By searchButton = By.xpath("//button[@type='submit']");
 
     // Add to Cart
     By firstProductAddToCart = By.xpath("(//div[@class='product-thumb']//button)[1]");
     By successAlert = By.xpath("//div[contains(@class, 'alert-success')]");
 
     // Currency Change
-    By currencyDropdown = By.xpath("//span[contains(@class ,'d-none')]"); // Currency Label
+    By currencyDropdown = By.xpath("//span[contains(@class ,'d-none')]");
     By euroOption = By.xpath("//a[text()='€ Euro']");
     By dollarOption = By.xpath("//a[text()='$ US Dollar']");
     By currencySymbolStrong = By.xpath("//form[@id='form-currency']//strong");

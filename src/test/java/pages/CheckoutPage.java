@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select; // مهم عشان القوائم المنسدلة
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 public class CheckoutPage extends BasePage {
     // Constructor
@@ -28,17 +28,17 @@ public class CheckoutPage extends BasePage {
 
     // Shipping
     By btnShippingMethod = By.id("button-shipping-methods");
-    By btnContinueShipping = By.id("button-shipping-method"); // كونتينيو الشحن
+    By btnContinueShipping = By.id("button-shipping-method");
 
     // Payment
     By btnPaymentMethod = By.id("button-payment-methods");
-    By btnContinuePayment = By.id("button-payment-method"); // كونتينيو الدفع
+    By btnContinuePayment = By.id("button-payment-method");
 
     // Confirm
     By confirmOrderBtn = By.id("button-confirm");
 
     By successAlert = By.cssSelector("div.alert-success");
-    By continueBtnSuccessPage = By.xpath("//a[text()='Continue']"); // الزر الأزرق في صفحة النهاية
+    By continueBtnSuccessPage = By.xpath("//a[text()='Continue']");
 
     // Actions
     public void selectGuestCheckout() {
