@@ -2,21 +2,22 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class HomePage extends BasePage {
-    // Constructor
+    //================Constructor=====================
     public HomePage(WebDriver driver , WebDriverWait wait){
         super(driver , wait);
 
     }
 
-    // Locator
+    //================Locator=========================
     By myAccountDropdown=By.xpath("//span[text()='My Account']");
     By registerLink=By.partialLinkText("Register");
     By loginLink= By.xpath("//a[text()='Login' and contains(@href ,'route=account/login') and contains(@class ,'dropdown-item')]");
+
+    By myAccountLink= By.xpath("//a[text()='My Account']");
 
     // Search Functionality
     By searchBox = By.name("search");
@@ -34,6 +35,13 @@ public class HomePage extends BasePage {
 
     By checkoutLink = By.xpath("//span[text()='Checkout']");
 
+    //-----
+    By shoppingCartLink = By.xpath("//span[text()='Shopping Cart']");
+    By wishlistLink = By.xpath("//span[contains(text() ,'Wish List')]");
+    By firstProductWishlist = By.xpath("(//div[@class='product-thumb']//button)[2]");
+
+
+    //=================Actions========================
     public void navigateToRegisterPage() {
         wait.until(ExpectedConditions.elementToBeClickable(myAccountDropdown));
         driver.findElement(myAccountDropdown).click();
@@ -94,6 +102,29 @@ public class HomePage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(checkoutLink));
         driver.findElement(checkoutLink).click();
 
+    }
+
+    public void navigateToMyAccountPage() {
+        wait.until(ExpectedConditions.elementToBeClickable(myAccountDropdown));
+        driver.findElement(myAccountDropdown).click();
+        wait.until(ExpectedConditions.elementToBeClickable(myAccountLink));
+        driver.findElement(myAccountLink).click();
+    }
+    public void navigateToShoppingCart() {
+        wait.until(ExpectedConditions.elementToBeClickable(shoppingCartLink));
+        driver.findElement(shoppingCartLink).click();
+    }
+    public void navigateToWishlist() {
+        wait.until(ExpectedConditions.elementToBeClickable(wishlistLink));
+        driver.findElement(wishlistLink).click();
+    }
+    public void addFirstProductToWishlist() {
+        wait.until(ExpectedConditions.elementToBeClickable(firstProductWishlist));
+        driver.findElement(firstProductWishlist).click();
+    }
+    public void navigateToHomePage() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.get("http://localhost/opencartproject/");
     }
 
 }

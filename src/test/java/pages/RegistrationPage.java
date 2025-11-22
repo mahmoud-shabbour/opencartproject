@@ -6,12 +6,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage extends BasePage {
-    // Constructor
+    //=============Constructor=============
     public RegistrationPage(WebDriver driver , WebDriverWait wait){
         super(driver , wait);
     }
 
-    // Locators
+    //==============Locators===============
     By firstNameField=By.id("input-firstname");
     By lastNameField=By.id("input-lastname");
     By emailField =By.id("input-email");
@@ -23,7 +23,7 @@ public class RegistrationPage extends BasePage {
     By myAccountDropdown = By.xpath("//span[text()='My Account']");
     By logoutLink =By.linkText("Logout");
 
-    // Action
+    //=============Action===================
     public void fillRegistrationForm(String fName, String lName, String email, String password) {
         driver.findElement(firstNameField).sendKeys(fName);
         driver.findElement(lastNameField).sendKeys(lName);

@@ -7,12 +7,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage {
 
-    // Constructor
+    //=============Constructor=================
     public LoginPage(WebDriver driver , WebDriverWait wait){
         super(driver , wait);
     }
 
-    // Locators
+    //==============Locators==================
     By emailField = By.id("input-email");
     By passwordField = By.id("input-password");
     By loginButton = By.xpath("//button[text()='Login']");
@@ -21,7 +21,7 @@ public class LoginPage extends BasePage {
     By returningCustomerHeading = By.xpath("//h2[text()='Returning Customer']");
 
 
-    // Actions
+    //================Actions===================
 
     public void enterEmail(String emailText) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(emailField));
