@@ -5,13 +5,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class CheckoutPage extends BasePage {
-    // Constructor
+    //===========Constructor=============
     public CheckoutPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
-    // Locators
+    //============Locators===============
     By guestRadioBtn = By.id("input-guest");
 
     By firstNameInput = By.id("input-firstname");
@@ -40,7 +41,7 @@ public class CheckoutPage extends BasePage {
     By successAlert = By.cssSelector("div.alert-success");
     By continueBtnSuccessPage = By.xpath("//a[text()='Continue']");
 
-    // Actions
+    //====================Actions====================
     public void selectGuestCheckout() {
         wait.until(ExpectedConditions.elementToBeClickable(guestRadioBtn));
         driver.findElement(guestRadioBtn).click();

@@ -12,11 +12,18 @@
 
             <class name="LoginInvalidCradential"/>
 
+            <class name="MyAccount"/>
         </classes>
     </test>
     <test name="Homepage">
         <classes>
             <class name="Home"/>
+        </classes>
+    </test>
+    <test name="Cart and Wishlist">
+        <classes>
+            <class name="Cart"/>
+            <class name="Wishlist"/>
         </classes>
     </test>
     <test name="Checkout">
