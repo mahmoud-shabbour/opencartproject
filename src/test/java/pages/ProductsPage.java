@@ -20,7 +20,7 @@ public class ProductsPage extends BasePage {
     By TestTextBox = By.id("input-option-208");
     By SelectInput = By.xpath("//*[@id=\"input-option-217\"]");
     By Textarea = By.name("option[209]");
-    By UploadFile = By.id("input-option-222"); // input[type=file]
+    By UploadFile = By.id("input-option-222");
     By Date = By.name("option[219]");
     By Time = By.id("input-option-221");
     By Time_Date = By.id("input-option-220");
@@ -111,7 +111,7 @@ public class ProductsPage extends BasePage {
         // Test TextBox
         driver.findElement(TestTextBox).sendKeys("Test");
 
-        // Select Input (Red)
+        // Select Input Red
         driver.findElement(SelectInput).sendKeys("Red (+$6.80)");
 
         // Textarea
